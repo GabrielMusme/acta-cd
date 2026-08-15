@@ -42,10 +42,10 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T03 from 12-mvp-execution-backlog.md.
+- Execute P1-T04 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - domain invariant validator service;
-  - explicit invariant error types.
+  - BusinessFact model;
+  - typed fact categories for BF-001..BF-018.
 
 ---
 
@@ -71,6 +71,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.7.0
+
+- Completed P1-T03 with a domain invariant validator service and explicit invariant error types.
+- Added deterministic positive/negative invariant tests covering DMI-001 to DMI-015.
+- Next planned task moves to P1-T04.
 
 ## 1.6.0
 
