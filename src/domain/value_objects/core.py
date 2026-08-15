@@ -10,6 +10,8 @@ _EMAIL_RE = re.compile(r"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$", re.IGNORECASE
 
 
 def _require_non_empty(value: str, field_name: str) -> str:
+    if not isinstance(value, str):
+        raise ValueError(f"{field_name} must be a string")
     normalized = value.strip()
     if not normalized:
         raise ValueError(f"{field_name} must be a non-empty string")
@@ -91,6 +93,8 @@ class VoteCount:
     def __post_init__(self) -> None:
         for field_name in ("yes", "no", "abstain"):
             field_value = getattr(self, field_name)
+            if isinstance(field_value, bool) or not isinstance(field_value, int):
+                raise ValueError(f"VoteCount.{field_name} must be an integer")
             if field_value < 0:
                 raise ValueError(f"VoteCount.{field_name} must be non-negative")
 

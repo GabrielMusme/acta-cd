@@ -27,6 +27,11 @@ def test_person_name_rejects_empty_value() -> None:
         PersonName("   ")
 
 
+def test_person_name_rejects_non_string_value() -> None:
+    with pytest.raises(ValueError):
+        PersonName(None)  # type: ignore[arg-type]
+
+
 def test_email_address_normalizes_and_compares_by_value() -> None:
     first = EmailAddress("User@example.com")
     second = EmailAddress("user@example.com")
@@ -78,6 +83,14 @@ def test_vote_count_total_and_validation() -> None:
 
     with pytest.raises(ValueError):
         VoteCount(yes=-1, no=0)
+
+
+def test_vote_count_rejects_non_integer_values() -> None:
+    with pytest.raises(ValueError):
+        VoteCount(yes=1.5, no=0)  # type: ignore[arg-type]
+
+    with pytest.raises(ValueError):
+        VoteCount(yes=True, no=0)
 
 
 def test_participant_role_trimmed_and_rejects_empty() -> None:
