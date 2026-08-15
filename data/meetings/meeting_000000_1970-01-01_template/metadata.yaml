@@ -1,0 +1,14 @@
+dataset_id: "meeting_000000_1970-01-01_template"
+meeting_id: "meeting_000000"
+created_at_utc: "1970-01-01T00:00:00Z"
+source_type: "template"
+language: "es"
+duration_seconds: 0
+audio_format: "wav"
+license: "internal-template"
+license_evidence: "template-only"
+contains_pii: false
+consent_reference: "N/A"
+sha256_original_audio: "not_applicable"
+storage_root: "data/meetings/meeting_000000_1970-01-01_template"
+notes: "Policy verification template; no real audio asset included."

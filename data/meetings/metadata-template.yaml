@@ -1,0 +1,14 @@
+dataset_id: "meeting_000001_2026-08-15_example"
+meeting_id: "meeting_000001"
+created_at_utc: "2026-08-15T00:00:00Z"
+source_type: "recorded_meeting"
+language: "es"
+duration_seconds: 0
+audio_format: "wav"
+license: "CC-BY-4.0"
+license_evidence: "https://example.org/license"
+contains_pii: false
+consent_reference: "N/A"
+sha256_original_audio: "replace_with_sha256"
+storage_root: "data/meetings/meeting_000001_2026-08-15_example"
+notes: "Template metadata. Replace all placeholder values before use."

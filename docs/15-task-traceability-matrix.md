@@ -48,6 +48,7 @@ This matrix starts with completed Phase 0 tasks and is expanded as new tasks are
 | P0-T03 | Configure quality gates | 10, 11, 12 | DOC-001, DOC-005 | ruff and pytest baseline plus scripts/quality.sh single command |
 | P0-T04 | Create ADR registry and templates | 00, 10, 11, 12 | DOC-002, DOC-005 | docs/adr/00-adr-index.md, docs/adr/adr-template.md, DEC-001 |
 | P0-T05 | Create conformance and traceability checklist | 00, 10, 12 | DOC-001, DOC-004, DOC-005, DOC-009 | docs/14-conformance-checklist.md and docs/15-task-traceability-matrix.md |
+| P0-T06 | Define sample data policy | 00, 10, 12 | ARCH-001, ARCH-002, DOC-001, DOC-005 | docs/16-sample-data-policy.md, data/meetings/README.md, data/meetings/metadata-template.yaml |
 
 ## 5.2 Update Rule
 
@@ -94,3 +95,7 @@ If a task cannot be mapped to rule IDs, it cannot be closed and must be reviewed
 ## 1.0.0
 
 - Created task-to-rule traceability matrix for Phase 0 execution.
+
+## 1.1.0
+
+- Added P0-T06 mapping for sample data policy and data/meetings conventions.

@@ -42,10 +42,9 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P0-T06 from 12-mvp-execution-backlog.md.
+- Execute P1-T01 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - sample audio dataset policy;
-  - naming and storage conventions under data/meetings/.
+  - PersonName, EmailAddress, PostalAddress, TimeInterval, Duration, DateRange, VoteCount, ParticipantRole.
 
 ---
 
@@ -71,6 +70,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.4.0
+
+- Completed P0-T06 with sample dataset policy and storage/naming conventions for data/meetings.
+- Added metadata template and one policy-verification dataset template.
+- Next planned task moves to P1-T01.
 
 ## 1.3.0
 
