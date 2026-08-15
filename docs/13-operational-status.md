@@ -42,9 +42,9 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T01 from 12-mvp-execution-backlog.md.
+- Execute P1-T02 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - PersonName, EmailAddress, PostalAddress, TimeInterval, Duration, DateRange, VoteCount, ParticipantRole.
+  - domain entities with identity and lifecycle semantics.
 
 ---
 
@@ -70,6 +70,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.5.0
+
+- Completed P1-T01 with immutable value objects and validation tests.
+- Added P1-T01 traceability mapping.
+- Next planned task moves to P1-T02.
 
 ## 1.4.0
 
