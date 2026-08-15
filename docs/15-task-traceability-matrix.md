@@ -52,6 +52,7 @@ This matrix starts with completed Phase 0 tasks and is expanded as new tasks are
 | P1-T01 | Implement domain value objects | 03, 12 | DM-REQ-005, DM-REQ-006, INV-005 | src/domain/value_objects/core.py, src/domain/value_objects/__init__.py, tests/domain/test_value_objects.py |
 | P1-T02 | Implement aggregate roots and entities | 03, 12 | DMI-002, DMI-006, DMI-007, DMI-008, DMI-009, DMI-010, DMI-011 | src/domain/entities/core.py, src/domain/entities/__init__.py, tests/domain/test_entities.py |
 | P1-T03 | Implement domain invariants service | 03, 12 | DMI-001, DMI-002, DMI-003, DMI-004, DMI-005, DMI-006, DMI-007, DMI-008, DMI-009, DMI-010, DMI-011, DMI-012, DMI-013, DMI-014, DMI-015 | src/domain/services/invariants.py, src/domain/services/invariant_errors.py, tests/domain/test_invariants_service.py |
+| P1-T04 | Implement Business Fact model | 04, 12 | BF-001, BF-002, BF-003, BF-004, BF-005 | src/business_facts/models/facts.py, src/business_facts/models/__init__.py, tests/business_facts/test_business_fact_model.py |
 
 ## 5.2 Update Rule
 
@@ -114,3 +115,7 @@ If a task cannot be mapped to rule IDs, it cannot be closed and must be reviewed
 ## 1.4.0
 
 - Added P1-T03 mapping for invariant service and explicit typed errors with DMI-001..DMI-015 coverage.
+
+## 1.5.0
+
+- Added P1-T04 mapping for immutable BusinessFact model, typed BF-001..BF-018 catalog, explicit references and append-only log.

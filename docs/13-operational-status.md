@@ -42,10 +42,10 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T04 from 12-mvp-execution-backlog.md.
+- Execute P1-T05 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - BusinessFact model;
-  - typed fact categories for BF-001..BF-018.
+  - fact validation pipeline;
+  - contradiction detection for immutable history.
 
 ---
 
@@ -71,6 +71,13 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.8.0
+
+- Completed P1-T04 with immutable BusinessFact model and typed BF-001..BF-018 categories.
+- Added explicit concept references and append-only BusinessFactLog behavior.
+- Added creation, immutability and validation tests for BusinessFact.
+- Next planned task moves to P1-T05.
 
 ## 1.7.0
 
