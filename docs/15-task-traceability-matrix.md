@@ -50,6 +50,7 @@ This matrix starts with completed Phase 0 tasks and is expanded as new tasks are
 | P0-T05 | Create conformance and traceability checklist | 00, 10, 12 | DOC-001, DOC-004, DOC-005, DOC-009 | docs/14-conformance-checklist.md and docs/15-task-traceability-matrix.md |
 | P0-T06 | Define sample data policy | 00, 10, 12 | ARCH-001, ARCH-002, DOC-001, DOC-005 | docs/16-sample-data-policy.md, data/meetings/README.md, data/meetings/metadata-template.yaml |
 | P1-T01 | Implement domain value objects | 03, 12 | DM-REQ-005, DM-REQ-006, INV-005 | src/domain/value_objects/core.py, src/domain/value_objects/__init__.py, tests/domain/test_value_objects.py |
+| P1-T02 | Implement aggregate roots and entities | 03, 12 | DMI-002, DMI-006, DMI-007, DMI-008, DMI-009, DMI-010, DMI-011 | src/domain/entities/core.py, src/domain/entities/__init__.py, tests/domain/test_entities.py |
 
 ## 5.2 Update Rule
 
@@ -104,3 +105,7 @@ If a task cannot be mapped to rule IDs, it cannot be closed and must be reviewed
 ## 1.2.0
 
 - Added P1-T01 mapping for immutable value objects and validation test coverage.
+
+## 1.3.0
+
+- Added P1-T02 mapping for entity identity stability, parent-child constraints and lifecycle validation.

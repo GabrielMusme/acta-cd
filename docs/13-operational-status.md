@@ -42,9 +42,10 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T02 from 12-mvp-execution-backlog.md.
+- Execute P1-T03 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - domain entities with identity and lifecycle semantics.
+  - domain invariant validator service;
+  - explicit invariant error types.
 
 ---
 
@@ -70,6 +71,13 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.6.0
+
+- Completed P1-T02 with aggregate roots and core entities.
+- Enforced identity stability and parent-child constraints in domain entities.
+- Added lifecycle guardrails for Meeting closure behavior.
+- Next planned task moves to P1-T03.
 
 ## 1.5.0
 
