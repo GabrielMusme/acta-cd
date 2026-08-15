@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: acta-cd
+Version: 0.1.0
+Summary: Intelligent Meeting Minutes Engine MVP baseline
+Requires-Python: <3.13,>=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi==0.116.1
+Requires-Dist: pydantic==2.11.7
+Requires-Dist: uvicorn==0.35.0
+
+# Project Context
+
+Project name
+
+Intelligent Meeting Minutes Engine
+
+Goal
+
+Generate high-quality meeting minutes from recorded meetings using open-source technologies.
+
+Main Constraints
+
+- Ubuntu Server 24.04
+- Xeon 8 cores
+- 32 GB RAM
+- No GPU
+- Offline operation
+- Free/Open Source Software only
+
+Primary Technologies
+
+Python
+
+PostgreSQL
+
+FastAPI
+
+faster-whisper
+
+WhisperX
+
+pyannote.audio
+
+spaCy
+
+LLM
+
+Development Strategy
+
+Documentation-first.
+
+Every implementation shall conform to the project documentation.
+
+Current Document
+
+03-domain-model.md

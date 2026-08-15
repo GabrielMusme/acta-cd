@@ -1,0 +1,7 @@
+app
+business_facts
+domain
+infrastructure
+knowledge
+processing
+shared
