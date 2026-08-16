@@ -42,10 +42,9 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T05 from 12-mvp-execution-backlog.md.
+- Execute P1-T06 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - fact validation pipeline;
-  - contradiction detection for immutable history.
+  - service for attaching accepted facts to related concepts.
 
 ---
 
@@ -71,6 +70,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.9.0
+
+- Completed P1-T05 with fact validation pipeline and immutable-history contradiction detection.
+- Added acceptance/rejection matrix and contradiction-focused negative tests for Business Fact validation.
+- Next planned task moves to P1-T06.
 
 ## 1.8.0
 
