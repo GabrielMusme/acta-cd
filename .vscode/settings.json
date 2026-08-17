@@ -1,6 +1,7 @@
 {
     "chat.tools.terminal.autoApprove": {
         "./scripts/quality.sh": true,
-        "uv": true
+        "uv": true,
+        "test": true
     }
 }

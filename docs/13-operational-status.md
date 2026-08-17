@@ -42,10 +42,11 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute Phase 1 go/no-go closure review from 12-mvp-execution-backlog.md (Thread G).
+- Define Phase 2 Persistence Foundation backlog and verification prerequisites.
 - Deliverables:
-  - phase gate decision record;
-  - approved transition to Phase 2 backlog definition.
+  - Phase 2 task breakdown;
+  - PostgreSQL local prerequisite checklist;
+  - migration and repository verification plan.
 
 ---
 
@@ -71,6 +72,13 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.12.0
+
+- Closed Phase 1 with formal GO decision in docs/reports/phase1-closure-review-2026-08-17.md.
+- Reconfirmed 56/56 Phase 1 gate tests and 57/57 full suite tests.
+- Authorized transition to Phase 2 Persistence Foundation planning.
+- Next planned step moves to Phase 2 backlog and local PostgreSQL prerequisites.
 
 ## 1.11.0
 
