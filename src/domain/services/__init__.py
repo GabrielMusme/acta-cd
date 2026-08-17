@@ -1,5 +1,12 @@
 """Domain services package exports."""
 
+from domain.services.fact_linking import (
+    DomainFactLinkingService,
+    FactConceptLink,
+    FactLinkingBatchResult,
+    FactLinkingError,
+    LinkedFact,
+)
 from domain.services.invariant_errors import (
     DMI001Error,
     DMI002Error,
@@ -42,6 +49,11 @@ __all__ = [
     "DMI013Error",
     "DMI014Error",
     "DMI015Error",
+    "FactLinkingError",
+    "FactConceptLink",
+    "LinkedFact",
+    "FactLinkingBatchResult",
+    "DomainFactLinkingService",
     "IdentitySnapshot",
     "BusinessFactRecord",
     "DomainInvariantContext",

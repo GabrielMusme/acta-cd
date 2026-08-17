@@ -54,6 +54,7 @@ This matrix starts with completed Phase 0 tasks and is expanded as new tasks are
 | P1-T03 | Implement domain invariants service | 03, 12 | DMI-001, DMI-002, DMI-003, DMI-004, DMI-005, DMI-006, DMI-007, DMI-008, DMI-009, DMI-010, DMI-011, DMI-012, DMI-013, DMI-014, DMI-015 | src/domain/services/invariants.py, src/domain/services/invariant_errors.py, tests/domain/test_invariants_service.py |
 | P1-T04 | Implement Business Fact model | 04, 12 | BF-001, BF-002, BF-003, BF-004, BF-005 | src/business_facts/models/facts.py, src/business_facts/models/__init__.py, tests/business_facts/test_business_fact_model.py |
 | P1-T05 | Implement Business Fact validators | 04, 12 | BF-002, BF-003, BF-004, BF-005 | src/business_facts/validators/pipeline.py, src/business_facts/validators/__init__.py, tests/business_facts/test_business_fact_validators.py |
+| P1-T06 | Implement Domain-Facts linking service | 03, 04, 12 | DMI-006, DMI-007, DMI-008, DMI-009, DMI-010, DMI-011, BF-004 | src/domain/services/fact_linking.py, src/domain/services/__init__.py, tests/domain/test_fact_linking_service.py |
 
 ## 5.2 Update Rule
 
@@ -124,3 +125,7 @@ If a task cannot be mapped to rule IDs, it cannot be closed and must be reviewed
 ## 1.6.0
 
 - Added P1-T05 mapping for fact validation pipeline, immutable-history contradiction detection and traceable validation reasons.
+
+## 1.7.0
+
+- Added P1-T06 mapping for domain-fact linkage over meeting context, relationship-respecting concept attachment and no-mutation guarantees for fact content.

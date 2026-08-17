@@ -42,9 +42,10 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T06 from 12-mvp-execution-backlog.md.
+- Execute P1-T07 from 12-mvp-execution-backlog.md.
 - Deliverables:
-  - service for attaching accepted facts to related concepts.
+  - consolidated test markers for phase gate;
+  - test report template.
 
 ---
 
@@ -70,6 +71,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.10.0
+
+- Completed P1-T06 with a domain-fact linking service using meeting-context relationship checks.
+- Added integration-style domain fixture tests for linkage acceptance/rejection and fact no-mutation behavior.
+- Next planned task moves to P1-T07.
 
 ## 1.9.0
 
