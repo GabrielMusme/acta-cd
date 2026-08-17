@@ -1,5 +1,7 @@
 from datetime import datetime
 
+import pytest
+
 from business_facts.models import (
     BusinessFact,
     BusinessFactCategory,
@@ -7,6 +9,8 @@ from business_facts.models import (
     ConceptReference,
 )
 from business_facts.validators import BusinessFactValidator
+
+pytestmark = [pytest.mark.phase1_gate]
 
 
 def _fact(

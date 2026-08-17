@@ -34,6 +34,11 @@ addopts = [
     "--strict-config",
     "--strict-markers",
 ]
+markers = [
+    "phase1_gate: consolidated Phase 1 go/no-go gate subset",
+    "phase1_invariants: invariant-focused tests for Domain Model DMI rules",
+    "phase1_fact_immutability: Business Fact immutability and append-only behavior tests",
+]
 
 [tool.ruff]
 target-version = "py312"

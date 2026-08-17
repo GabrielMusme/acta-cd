@@ -42,10 +42,10 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P1-T07 from 12-mvp-execution-backlog.md.
+- Execute Phase 1 go/no-go closure review from 12-mvp-execution-backlog.md (Thread G).
 - Deliverables:
-  - consolidated test markers for phase gate;
-  - test report template.
+  - phase gate decision record;
+  - approved transition to Phase 2 backlog definition.
 
 ---
 
@@ -71,6 +71,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.11.0
+
+- Completed P1-T07 with consolidated `phase1_gate` test markers and dedicated coverage markers for invariants and fact immutability.
+- Added Phase 1 gate report template and generated an execution report artifact with GO decision.
+- Next planned step moves to Phase 1 closure review (Thread G).
 
 ## 1.10.0
 

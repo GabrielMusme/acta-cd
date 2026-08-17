@@ -14,6 +14,8 @@ from domain.value_objects import (
     VoteCount,
 )
 
+pytestmark = [pytest.mark.phase1_gate]
+
 
 def test_person_name_is_trimmed_and_immutable() -> None:
     value = PersonName("  Alice Doe  ")

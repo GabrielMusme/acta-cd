@@ -36,6 +36,8 @@ from domain.services import (
 )
 from domain.value_objects import ParticipantRole, PersonName, VoteCount
 
+pytestmark = [pytest.mark.phase1_gate, pytest.mark.phase1_invariants]
+
 
 @dataclass
 class _FakeValueObjectWithId:

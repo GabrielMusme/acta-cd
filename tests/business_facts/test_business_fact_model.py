@@ -10,6 +10,8 @@ from business_facts.models import (
     ConceptReference,
 )
 
+pytestmark = [pytest.mark.phase1_gate, pytest.mark.phase1_fact_immutability]
+
 
 def _reference() -> ConceptReference:
     return ConceptReference(concept_type="Meeting", concept_id="meeting-1")

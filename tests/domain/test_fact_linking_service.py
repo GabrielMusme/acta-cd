@@ -1,5 +1,7 @@
 from datetime import datetime
 
+import pytest
+
 from business_facts.models import BusinessFact, BusinessFactCategory, ConceptReference
 from domain.entities import (
     Action,
@@ -16,6 +18,8 @@ from domain.entities import (
 )
 from domain.services import DomainFactLinkingService
 from domain.value_objects import ParticipantRole, PersonName, VoteCount
+
+pytestmark = [pytest.mark.phase1_gate]
 
 
 def _domain_fixture() -> tuple[Meeting, Person, Resolution, Action, Vote]:

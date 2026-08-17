@@ -19,6 +19,8 @@ from domain.entities import (
 )
 from domain.value_objects import ParticipantRole, PersonName, VoteCount
 
+pytestmark = [pytest.mark.phase1_gate]
+
 
 def _meeting() -> Meeting:
     return Meeting(
