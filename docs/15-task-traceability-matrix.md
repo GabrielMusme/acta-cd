@@ -26,6 +26,8 @@ This matrix starts with completed Phase 0 tasks and is expanded as new tasks are
 - 10-implementation-plan.md
 - 11-mvp-technology-stack.md
 - 12-mvp-execution-backlog.md
+- 18-phase2-execution-backlog.md
+- 19-phase2-prerequisites.md
 - 14-conformance-checklist.md
 
 ---
@@ -56,6 +58,7 @@ This matrix starts with completed Phase 0 tasks and is expanded as new tasks are
 | P1-T05 | Implement Business Fact validators | 04, 12 | BF-002, BF-003, BF-004, BF-005 | src/business_facts/validators/pipeline.py, src/business_facts/validators/__init__.py, tests/business_facts/test_business_fact_validators.py |
 | P1-T06 | Implement Domain-Facts linking service | 03, 04, 12 | DMI-006, DMI-007, DMI-008, DMI-009, DMI-010, DMI-011, BF-004 | src/domain/services/fact_linking.py, src/domain/services/__init__.py, tests/domain/test_fact_linking_service.py |
 | P1-T07 | Build Phase 1 gate test suite | 03, 04, 12 | DMI-001, DMI-015, BF-002, BF-004 | pyproject.toml test markers, docs/17-phase1-gate-test-report-template.md, docs/reports/phase1-gate-report-2026-08-17.md, docs/reports/phase1-closure-review-2026-08-17.md |
+| P2-T01 | Provision local PostgreSQL verification environment | 07, 11, 18, 19 | PER-001, PER-005 | docs/phase2-postgresql-wsl.md, scripts/check_postgres.sh, PostgreSQL 16.15 readiness and disposable database verification |
 
 ## 5.2 Update Rule
 
@@ -138,3 +141,7 @@ If a task cannot be mapped to rule IDs, it cannot be closed and must be reviewed
 ## 1.9.0
 
 - Added Phase 1 closure review evidence with GO decision and transition authorization for Phase 2 planning.
+
+## 1.10.0
+
+- Added P2-T01 mapping for the reproducible PostgreSQL WSL environment, environment-driven credentials and disposable database verification.

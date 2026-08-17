@@ -2,6 +2,9 @@
     "chat.tools.terminal.autoApprove": {
         "./scripts/quality.sh": true,
         "uv": true,
-        "test": true
+        "test": true,
+        "command": true,
+        "true": true,
+        "pg_isready": true
     }
 }

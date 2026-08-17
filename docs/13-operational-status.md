@@ -13,6 +13,8 @@
 - 10-implementation-plan.md
 - 11-mvp-technology-stack.md
 - 12-mvp-execution-backlog.md
+- 18-phase2-execution-backlog.md
+- 19-phase2-prerequisites.md
 
 ---
 
@@ -42,11 +44,11 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Define Phase 2 Persistence Foundation backlog and verification prerequisites.
+- Execute P2-T02 from 18-phase2-execution-backlog.md.
 - Deliverables:
-  - Phase 2 task breakdown;
-  - PostgreSQL local prerequisite checklist;
-  - migration and repository verification plan.
+  - SQLAlchemy 2.x and Alembic dependencies;
+  - environment-driven persistence configuration;
+  - import and configuration boundary tests.
 
 ---
 
@@ -72,6 +74,19 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.14.0
+
+- Closed P2-T01 after verifying PostgreSQL 16.15, `psql`, `pg_isready`, the environment-driven test connection, and disposable database creation/deletion.
+- Added the reproducible WSL setup guide and `scripts/check_postgres.sh` verification command.
+- Next planned task moves to P2-T02: add SQLAlchemy 2.x, Alembic and the persistence configuration boundary.
+
+## 1.13.0
+
+- Created Phase 2 execution backlog in docs/18-phase2-execution-backlog.md.
+- Created PostgreSQL and persistence prerequisite checklist in docs/19-phase2-prerequisites.md.
+- Diagnosed that `psql` and `pg_isready` are not currently available in PATH.
+- Next planned task moves to P2-T02.
 
 ## 1.12.0
 
