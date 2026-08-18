@@ -1,8 +1,21 @@
 from __future__ import annotations
 
-from datetime import datetime
+import random
+from datetime import datetime, timezone
+from uuid import UUID
 
-from sqlalchemy import DateTime, ForeignKey, String, func
+from sqlalchemy import DateTime, ForeignKey, Integer, JSON, String, event, func
+
+
+def _uuid7() -> str:
+    """Return a valid UUIDv7 identifier in canonical string form."""
+    unix_ts_ms = int(datetime.now(timezone.utc).timestamp() * 1000)
+    rand_a = random.getrandbits(12)
+    rand_b = random.getrandbits(62)
+    uuid_int = ((unix_ts_ms & 0xFFFFFFFFFFFF) << 64) | ((7 << 12) << 52) | ((rand_a & 0xFFF) << 52) | (rand_b & ((1 << 62) - 1))
+    return str(UUID(int=uuid_int))
+
+
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
@@ -39,6 +52,7 @@ class MeetingModel(Base):
     agenda: Mapped[AgendaModel | None] = relationship(back_populates="meeting", uselist=False)
     discussions: Mapped[list[DiscussionModel]] = relationship(back_populates="meeting")
     attachments: Mapped[list[AttachmentModel]] = relationship(back_populates="meeting")
+    business_facts: Mapped[list[BusinessFactModel]] = relationship(back_populates="meeting")
 
 
 class PersonModel(Base):
@@ -194,3 +208,43 @@ class AttachmentModel(Base):
     deleted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
     meeting: Mapped[MeetingModel] = relationship(back_populates="attachments")
+
+
+class BusinessFactModel(Base):
+    __tablename__ = "business_facts"
+
+    id: Mapped[str] = mapped_column(String(64), primary_key=True, default=_uuid7)
+    meeting_id: Mapped[str] = mapped_column(ForeignKey("meetings.id"), nullable=False)
+    category: Mapped[str] = mapped_column(String(32), nullable=False)
+    occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    payload: Mapped[dict[str, object]] = mapped_column(JSON, nullable=False, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, server_default=func.now(), onupdate=func.now())
+    deleted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    meeting: Mapped[MeetingModel] = relationship(back_populates="business_facts")
+    references: Mapped[list[BusinessFactReferenceModel]] = relationship(
+        back_populates="fact",
+        cascade="all, delete-orphan",
+        order_by="BusinessFactReferenceModel.position",
+    )
+
+
+class BusinessFactReferenceModel(Base):
+    __tablename__ = "business_fact_references"
+
+    id: Mapped[str] = mapped_column(String(64), primary_key=True, default=_uuid7)
+    fact_id: Mapped[str] = mapped_column(ForeignKey("business_facts.id"), nullable=False)
+    concept_type: Mapped[str] = mapped_column(String(64), nullable=False)
+    concept_id: Mapped[str] = mapped_column(String(64), nullable=False)
+    position: Mapped[int] = mapped_column(Integer, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, server_default=func.now(), onupdate=func.now())
+    deleted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    fact: Mapped[BusinessFactModel] = relationship(back_populates="references")
+
+
+@event.listens_for(BusinessFactModel, "before_update")
+def _reject_business_fact_update(mapper, connection, target):
+    raise ValueError("BusinessFact row is immutable and append-only; use a new fact record instead.")

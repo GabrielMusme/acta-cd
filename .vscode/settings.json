@@ -5,6 +5,9 @@
         "test": true,
         "command": true,
         "true": true,
-        "pg_isready": true
+        "pg_isready": true,
+        "pytest": true,
+        "env": true,
+        "printf": true
     }
 }

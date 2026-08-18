@@ -30,6 +30,7 @@ src/domain/value_objects/core.py
 src/infrastructure/__init__.py
 src/infrastructure/logging/__init__.py
 src/infrastructure/persistence/__init__.py
+src/infrastructure/persistence/models.py
 src/infrastructure/repositories/__init__.py
 src/infrastructure/storage/__init__.py
 src/knowledge/__init__.py

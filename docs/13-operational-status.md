@@ -44,11 +44,11 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P2-T02 from 18-phase2-execution-backlog.md.
+- Execute P2-T06 from 18-phase2-execution-backlog.md.
 - Deliverables:
-  - SQLAlchemy 2.x and Alembic dependencies;
-  - environment-driven persistence configuration;
-  - import and configuration boundary tests.
+  - persistence integration fixtures;
+  - full Phase 2 persistence evidence package;
+  - final verification of migration stability and append-only fact semantics.
 
 ---
 
@@ -74,6 +74,12 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.15.0
+
+- Closed P2-T05 after implementing the SQLAlchemy-backed Business Fact persistence layer, fact reference mapping, UUIDv7 identifiers, append-only update guardrails, and a persistence regression test covering round-trip and overwrite rejection.
+- Verified the fact persistence subset with `uv run pytest tests/persistence/test_business_fact_persistence.py tests/persistence/test_database_config.py -q` and recorded 6 passing checks.
+- Next planned task moves to P2-T06: build the Phase 2 persistence integration suite and evidence package.
 
 ## 1.14.0
 
