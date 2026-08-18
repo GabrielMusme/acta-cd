@@ -75,6 +75,13 @@ When a relevant operational decision changes, update this file and append an ent
 
 # 7. Changelog
 
+## 1.16.0
+
+- Closed P2-T06 after executing the complete persistence subset and generating the Phase 2 proof package.
+- Verified the persistence suite with `cd /home/gabriel/proyectos/acta-cd && uv run pytest tests/persistence -q`, which returned 8 passed in 2.22s.
+- Saved the report to `docs/reports/phase2-persistence-report-2026-08-18.md` and updated the backlog status for P2-T06.
+- Phase 2 persistence gate is now green and ready for downstream handoff.
+
 ## 1.15.0
 
 - Closed P2-T05 after implementing the SQLAlchemy-backed Business Fact persistence layer, fact reference mapping, UUIDv7 identifiers, append-only update guardrails, and a persistence regression test covering round-trip and overwrite rejection.

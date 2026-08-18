@@ -191,6 +191,13 @@ Verification:
 - run the complete persistence test subset;
 - generate a Phase 2 persistence report.
 
+Status: CLOSED
+
+Evidence:
+
+- `uv run pytest tests/persistence -q` -> 8 passed in 2.22s;
+- report saved to `docs/reports/phase2-persistence-report-2026-08-18.md`.
+
 ---
 
 # 6. Task Dependencies
