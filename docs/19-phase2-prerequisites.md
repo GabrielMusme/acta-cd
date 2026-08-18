@@ -29,8 +29,8 @@ Define the local prerequisites and verification sequence before implementing Pha
 - [x] Python 3.12 target available.
 - [x] uv environment and lock workflow available.
 - [x] pytest and Ruff quality gate available.
-- [ ] SQLAlchemy 2.x added and locked.
-- [ ] Alembic added and locked.
+- [x] SQLAlchemy 2.x added and locked.
+- [x] Alembic added and locked.
 
 ## 3.2 PostgreSQL
 
@@ -53,8 +53,8 @@ creation/deletion.
 - [x] UTC timestamp policy is documented.
 - [x] `deleted_at` soft-delete policy is documented.
 - [x] Business Fact immutability policy is documented.
-- [ ] Concrete migration table design reviewed.
-- [ ] Repository boundary reviewed.
+- [x] Concrete migration table design reviewed.
+- [x] Repository boundary reviewed.
 
 ---
 
