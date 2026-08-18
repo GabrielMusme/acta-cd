@@ -43,8 +43,8 @@ export POSTGRES_HOST="localhost"
 export POSTGRES_PORT="5432"
 export POSTGRES_DB="acta_cd"
 
-export ACTA_DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}"
-export ACTA_TEST_DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/acta_cd_test"
+export ACTA_DATABASE_URL="postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}"
+export ACTA_TEST_DATABASE_URL="postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/acta_cd_test"
 ```
 
 Create the role and its databases once. The role needs `CREATEDB` because the
