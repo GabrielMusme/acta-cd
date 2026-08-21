@@ -15,6 +15,8 @@
 - 12-mvp-execution-backlog.md
 - 18-phase2-execution-backlog.md
 - 19-phase2-prerequisites.md
+- 20-phase3-execution-backlog.md
+- 21-phase3-prerequisites.md
 
 ---
 
@@ -44,11 +46,12 @@ This file stores the current operational state so implementation can continue wi
 
 # 4. Next Planned Task
 
-- Execute P2-T06 from 18-phase2-execution-backlog.md.
-- Deliverables:
-  - persistence integration fixtures;
-  - full Phase 2 persistence evidence package;
-  - final verification of migration stability and append-only fact semantics.
+- Start P3-T01 and P3-T02 from 20-phase3-execution-backlog.md.
+- Complete readiness checklist from 21-phase3-prerequisites.md before starting P3-T03.
+- Immediate deliverables:
+  - stage contracts and traceability envelopes;
+  - checkpoint/restart scaffolding;
+  - baseline sample dataset and processing dependency readiness.
 
 ---
 
@@ -74,6 +77,18 @@ When a relevant operational decision changes, update this file and append an ent
 ---
 
 # 7. Changelog
+
+## 1.18.0
+
+- Added Phase 3 planning artifacts: docs/20-phase3-execution-backlog.md and docs/21-phase3-prerequisites.md.
+- Transitioned next planned task from generic Phase 3 start to concrete execution sequence: P3-T01, P3-T02 and P3 readiness before P3-T03.
+- Registered explicit operator intervention points for FFmpeg installation, sample audio provisioning and model bootstrap policy.
+
+## 1.17.0
+
+- Moved the next planned task from the completed Phase 2 persistence work into the Phase 3 Processing Pipeline MVP.
+- The next implementation focus is the minimal pipeline slice: ingestion, transcription, candidate extraction, validation, and checkpoint/restart support.
+- This change aligns the operational status with the Phase 3 objectives in 10-implementation-plan.md.
 
 ## 1.16.0
 
